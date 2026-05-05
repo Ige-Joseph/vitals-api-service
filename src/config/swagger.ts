@@ -3,10 +3,7 @@ import { waitlistDocs } from "../modules/waitlist/waitlist.docs";
 import { contactDocs } from "../modules/contact/contact.docs";
 
 const appUrl =
-  process.env.APP_URL ||
-  (process.env.NODE_ENV === "production"
-    ? "https://vitals-api-service.fly.dev"
-    : "http://localhost:3000");
+  process.env.APP_URL || `http://localhost:${process.env.PORT || 3000}`;
 
 export const swaggerSpec = swaggerJSDoc({
   definition: {
@@ -19,10 +16,7 @@ export const swaggerSpec = swaggerJSDoc({
     servers: [
       {
         url: appUrl,
-        description:
-          process.env.NODE_ENV === "production"
-            ? "Production server"
-            : "Local development server",
+        description: "API server",
       },
     ],
     paths: {
