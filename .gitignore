@@ -1,0 +1,63 @@
+# =========================
+# Node.js
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Build output
+# =========================
+dist/
+build/
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Prisma
+# =========================
+prisma/migrations/
+# (optional: keep if you want migrations versioned → usually you SHOULD keep them)
+# So better:
+# !prisma/migrations/
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# VS Code / Editors
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Temporary files
+# =========================
+tmp/
+temp/
+
+# =========================
+# Coverage
+# =========================
+coverage/
+
+# =========================
+# Fly.io (optional)
+# =========================
+.fly/
